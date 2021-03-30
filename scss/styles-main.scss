@@ -1,0 +1,42 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/scss/functions";
+
+/* SCSS HEX */
+$steel-teal: #588b8bff;
+$white: #ffffffff;
+$unbleached-silk: #ffd5c2ff;
+$cadmium-orange: #f28f3bff;
+$cedar-chest: #c8553dff;
+
+$gradient: linear-gradient(180deg,$verdigris,$bittersweet);
+// 2. Include any default variable overrides here
+body.bg-gradient{
+    height: 100%;
+}
+.bg-gradient{
+    background-image: $gradient;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.bg-platinum{
+    background-color: $peach-puff;
+}
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+
+// 5. Add additional custom code here
