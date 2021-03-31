@@ -6,12 +6,16 @@
   background-attachment: fixed;
 }
 
-.bg-cc-linen {
-  background-color: #f7e7deff;
+.bg-main-body-bg {
+  background-color: #323036ff !important;
 }
 
-.rounded-5 {
-  border-radius: 1em;
+.bg-seco-body-bg {
+  background-color: #6d6875ff !important;
+}
+
+.txt-color-main {
+  color: #fbdac8ff !important;
 }
 
 :root {
@@ -1736,5 +1740,35 @@ progress {
   .gy-xxl-5 {
     --bs-gutter-y: 3rem;
   }
+}
+
+.rounded-5 {
+  border-radius: 1em;
+}
+
+.rounded-end-5 {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-right-radius: 2rem !important;
+  border-top-right-radius: 2rem !important;
+}
+
+.rounded-start-5 {
+  border-bottom-left-radius: 2rem !important;
+  border-top-left-radius: 2rem !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.rounded-top-5 {
+  border-top-left-radius: 2rem !important;
+  border-top-right-radius: 2rem !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.no-rount-top {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 /*# sourceMappingURL=styles-main.css.map */

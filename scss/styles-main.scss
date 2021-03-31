@@ -16,6 +16,8 @@ $cc-liver: #504c56ff;
 $cc-jet: #323036ff;
 
 $gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
+
+$emSize : 2rem;
 // 2. Include any default variable overrides here
 
 .bg-gradient{
@@ -24,13 +26,17 @@ $gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.bg-cc-linen{
-    background-color: $cc-linen;
+.bg-main-body-bg{
+    background-color: $cc-jet !important;
+}
+.bg-seco-body-bg{
+    background-color: $cc-lavender !important;
 }
 
-.rounded-5{
-    border-radius: 1em;
+.txt-color-main{
+    color: $cc-unbleached-silk !important;
 }
+
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../bootstrap/scss/variables";
@@ -45,3 +51,33 @@ $gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59
 @import "../bootstrap/scss/grid";
 
 // 5. Add additional custom code here
+.rounded-5{
+    border-radius: 1em; 
+}
+
+.rounded-end-5{
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: $emSize !important;
+    border-top-right-radius: $emSize !important;
+}
+.rounded-start-5{
+    border-bottom-left-radius: $emSize !important;
+    border-top-left-radius: $emSize !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.rounded-top-5{
+    border-top-left-radius: $emSize !important;
+    border-top-right-radius: $emSize !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.no-rount-top{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+image{
+}

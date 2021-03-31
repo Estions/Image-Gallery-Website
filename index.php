@@ -12,28 +12,49 @@
     <title>Template Webpage</title>
   </head>
   <body class = "bg-gradient"> <!-- Body -->
-    <div class="container"> <!-- Gallery Container -->
-      <div class="row g-0"> <!-- Gallery Row Container -->
-        <div class="col p-3 border-l bg-cc-linen rounded-end rounded-5"> <!--Gallery Column 1 -->
-        <?php
-          $imgArray = array();
-          $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
-          while(!feof($myfile))
-          {
-            $line = fgets($myfile);
-            array_push($imgArray,$line);
+    <?php
+      $dir = "./images/";
+      $images = array();
+      // Open a directory, and read its contents
+      if (is_dir($dir)){
+        if ($dh = opendir($dir)){
+          while (($file = readdir($dh)) !== false){
+            if(str_contains($file,".jpg"))array_push($images,$file);
           }
-        ?>
-        <?php
-          for($i = 0 ; $i < count($imgArray) ; $i++)
-          if($i % 2 == 0) echo "<p>".$imgArray[$i]."</p>";
-        ?>
+          closedir($dh);
+        }
+      }
+    ?>
+    <div class="container"> <!-- Gallery Container -->
+      <div class="row g-0 mt-3"> <!-- Name Row Container -->
+        <h1 class="bg-main-body-bg text-center p-3 text-nowrap fs1 m-0 rounded-top-5 txt-color-main">Gallery</h1>
+      </div>
+      <div class="row g-0 mb-3"> <!-- Gallery Row Container -->
+        <div class="col bg-main-body-bg p-2 pt-0 rounded-start-5 rounded-start no-rount-top"> <!--Gallery Column 1 -->
+          <?php
+            for($i = 1 ; $i < count($images)+1 ; $i++)
+            if($i % 2 == 0)
+            {
+              $name = pathinfo($images[$i], PATHINFO_FILENAME);
+              $path = $dir . $name . ".jpg";
+              echo "<div class='container bg-seco-body-bg m-3 p-3 text-center rounded-5'>";
+              echo "<img src='$path' class='text-center img-fluid rounded-3 flex-fill' alt='Img $i'>";
+              echo "<h3 class='text-center txt-color-main'>$name</h3></div>";
+            }
+          ?>
         </div>
-        <div class="col p-3 border-r bg-cc-linen rounded-start rounded-5"> <!--Gallery Column 2 -->
-        <?php
-          for($i = 0 ; $i < count($imgArray) ; $i++)
-          if($i % 2 !== 0) echo "<p>".$imgArray[$i]."</p>";
-        ?>
+        <div class="col bg-main-body-bg p-0 rounded-end-5 rounded-end   no-rount-top"> <!--Gallery Column 2 -->
+          <?php
+            for($i = 0 ; $i < count($images) ; $i++)
+            if($i % 2 !== 0)
+            {
+              $name = pathinfo($images[$i], PATHINFO_FILENAME);
+              $path = $dir . $name . ".jpg";
+              echo "<div class='container bg-seco-body-bg m-3 mx-0 p-3 text-center rounded-5'>";
+              echo "<img src='$path' class='text-center img-fluid rounded-3 flex-fill' alt='Img $i'>";
+              echo "<h3 class='text-center txt-color-main'>$name</h3></div>";
+            }
+          ?>
         </div>
         </div>
       </div>
