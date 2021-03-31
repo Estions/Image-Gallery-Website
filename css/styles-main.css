@@ -1,17 +1,17 @@
 /* SCSS HEX */
-body.bg-gradient {
-  height: 100%;
-}
-
 .bg-gradient {
-  background-image: linear-gradient(180deg, #00afb9ff, #f07167ff);
+  background-image: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
   background-color: transparent;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.bg-platinum {
-  background-color: #fed9b7ff;
+.bg-cc-linen {
+  background-color: #f7e7deff;
+}
+
+.rounded-5 {
+  border-radius: 1em;
 }
 
 :root {
@@ -38,7 +38,7 @@ body.bg-gradient {
   --bs-dark: #212529;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, #00afb9ff, #f07167ff);
+  --bs-gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
 }
 
 *,

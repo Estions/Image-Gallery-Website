@@ -5,27 +5,32 @@
 @import "../bootstrap/scss/functions";
 
 /* SCSS HEX */
-$steel-teal: #588b8bff;
-$white: #ffffffff;
-$unbleached-silk: #ffd5c2ff;
-$cadmium-orange: #f28f3bff;
-$cedar-chest: #c8553dff;
+$cc-linen: #f7e7deff;
+$cc-unbleached-silk: #fbdac8ff;
+$cc-apricot: #ffcdb2ff;
+$cc-melon: #ffb4a2ff;
+$cc-pastel-pink: #e5989bff;
+$cc-english-lavender: #b5838dff;
+$cc-lavender: #6d6875ff;
+$cc-liver: #504c56ff;
+$cc-jet: #323036ff;
 
-$gradient: linear-gradient(180deg,$verdigris,$bittersweet);
+$gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
 // 2. Include any default variable overrides here
-body.bg-gradient{
-    height: 100%;
-}
+
 .bg-gradient{
     background-image: $gradient;
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.bg-platinum{
-    background-color: $peach-puff;
+.bg-cc-linen{
+    background-color: $cc-linen;
 }
 
+.rounded-5{
+    border-radius: 1em;
+}
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../bootstrap/scss/variables";
