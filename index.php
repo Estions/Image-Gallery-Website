@@ -12,7 +12,11 @@
     <title>Template Webpage</title>
   </head>
   <body class = "bg-gradient">
-      <div class="container">
+      <?php
+    $txt = "PHP";
+    echo "I love $txt!";
+      ?>    
+  <div class="container">
           <div class="row g-0">
               <div class="col p-3 border-l bg-cc-linen rounded-end rounded-5">
                     sssss
