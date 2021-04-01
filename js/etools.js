@@ -1,77 +1,106 @@
-const images = new Array();
-var gI = 0;
-var saving = true;
+var images;
+var page = 1;
+const limit = 10;
 
-//fetch data from picsum API
-fetch('https://picsum.photos/v2/list?page=2&limit=100')
-    .then(res => res.json())
-    .then(data => saveData(data));
+var j = 0;
 
-//save fetched data to array
-function saveData(parsedData)
-{
-    for(let i = 0 ; i < parsedData.length ; i ++)
-    {
-        images.push(parsedData[i]);
-    }
-    images.sort();
-    saving = false;
-    loadImages();
-    
-}
 
 //2 columns
-const target1 = document.querySelector(".jsLinkContainter1");
-const target2 = document.querySelector(".jsLinkContainter2");
+const JavaLinkedContainer1 = document.querySelector(".JLC1");
+const JavaLinkedContainer2 = document.querySelector(".JLC2");
+
+loadBatch();
+
+async function loadBatch()
+{
+    images = new Array();
+
+    /* This worked, but the image size was way too huge for a reasonable websitex
+    var res = await fetch('https://picsum.photos/v2/list?page='+page+'&limit='+limit)
+    var json = await res.json();
+    */
+
+    var res;
+    var json;
+    var url;
+
+    for(let i = 0 ; i < limit ; i++){
+        j++;
+        if(Math.round(Math.random()) == 0) 
+        {
+            url = "https://picsum.photos/id/"+j+"/1080/1920"
+        }
+        else
+        {
+            url = "https://picsum.photos/id/"+j+"/1920/1080"
+        }
+        res = await fetch(url);
+        images.push(res.url);
+    }
+    
+    displayData();
+}
+
 
 //Load Images
-function loadImages(numImg = 10)
+async function displayData()
 {
-    //if saving no complete - stop
-    if(saving == true) return;
-
-    for(let i = 0 ; i < numImg ; i ++)
+    for(let i = 0 ; i < limit ; i ++)
     {
-        console.log(images[gI+i]);//debug
-        console.log(gI);
+        //console.log(images[i]);//debug
+        
         //save image to temp container, just in case
-        var tempIMG = images[gI+i];
-        //main container for sinle image data
-        const cc_Container = document.createElement("div");
-        cc_Container.className = "container-fluid my-3";
-        //image object
-        const cc_Image = document.createElement("img");
-        cc_Image.src = tempIMG.download_url;
-        cc_Image.className = "img-fluid p-0";
-        //image name - (in case of picsum - id)
-        const cc_Name = document.createElement("h3");
-        cc_Name.innerText = tempIMG.id;
-        cc_Name.className = "text-center fs-1 m-0 py-1 bg-main-body";
-        //image author
-        const cc_Author = document.createElement("h4");
-        cc_Author.innerText = tempIMG.author;
-        cc_Author.className = "text-center fs-4 m-0 py-1 fst-italic bg-main-body";
+        var tempURL = images[i];
+        var tempaObj = document.createElement("a");
+        tempaObj.href = tempURL;
+        var splitPath = tempaObj.pathname.split('/');
+        var url = "https://picsum.photos/id/"+splitPath[2]+"/info"
+        res = await fetch(url);
+        json = await res.json();
+        console.log(json);
 
-        //evenly distribute singular image containers
-        if(i%2 == 0) {
-            target1.appendChild(cc_Container);
-        } else { 
-            target2.appendChild(cc_Container);
+        //main container for sinle image data
+        const c_Container = document.createElement("div");
+        c_Container.className = "container-fluid my-3";
+        //image object
+        const c_Image = document.createElement("img");
+        c_Image.src = tempURL;
+        c_Image.className = "img-fluid p-0";
+        c_Image.setAttribute("loading","lazy");
+        //image name - (in case of picsum - id)
+        const c_Name = document.createElement("h3");
+        c_Name.innerText = json.id;
+        c_Name.className = "text-center fs-1 m-0 py-1 bg-main-body";
+        //image author
+        const c_Author = document.createElement("h4");
+        c_Author.innerText = json.author;
+        c_Author.className = "text-center fs-4 m-0 py-1 fst-italic bg-main-body";
+
+        if(i%2 == 0)
+        {
+            JavaLinkedContainer1.appendChild(c_Container);
+            
         }
+        else
+        {
+            JavaLinkedContainer2.appendChild(c_Container);
+            
+        }
+        //evenly distribute singular image containers
+        
 
         //add all children to image container
-        cc_Container.appendChild(cc_Image);
-        cc_Container.appendChild(cc_Name);
-        cc_Container.appendChild(cc_Author);
-        //add 1 to global i
-        gI++;
+        c_Container.appendChild(c_Image);
+        c_Container.appendChild(c_Name);
+        c_Container.appendChild(c_Author);
     }
+    page++;
 }
 //Once scroll check if windowScrollY + windowInnerHeight >= Document
 window.addEventListener('scroll', () => 
 {
-    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight)
+    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight/2)
     {
-        loadImages();
+        loadBatch();
     }
 });

@@ -9,7 +9,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost/CVTest/index.php",
+            "url": "http://localhost/CVTest/index.html",
             "webRoot": "${workspaceFolder}"
         }
         
