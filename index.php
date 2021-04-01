@@ -21,38 +21,39 @@
           while (($file = readdir($dh)) !== false){
             if(str_contains($file,".jpg"))array_push($images,$file);
           }
+          asort($images);
           closedir($dh);
         }
       }
     ?>
     <div class="container"> <!-- Gallery Container -->
-      <div class="row g-0 mt-3"> <!-- Name Row Container -->
-        <h1 class="bg-main-body-bg text-center p-3 text-nowrap fs1 m-0 rounded-top-5 txt-color-main">Gallery</h1>
+      <div class="row g-0"> <!-- Name Row Container -->
+        <h1 class="">Gallery</h1>
       </div>
-      <div class="row g-0 mb-3"> <!-- Gallery Row Container -->
-        <div class="col bg-main-body-bg p-2 pt-0 rounded-start-5 rounded-start no-rount-top"> <!--Gallery Column 1 -->
+      <div class="row g-5"> <!-- Gallery Row Container -->
+        <div class="col"> <!--Gallery Column 1 -->
           <?php
             for($i = 1 ; $i < count($images)+1 ; $i++)
             if($i % 2 == 0)
             {
               $name = pathinfo($images[$i], PATHINFO_FILENAME);
-              $path = $dir . $name . ".jpg";
-              echo "<div class='container bg-seco-body-bg m-3 p-3 text-center rounded-5'>";
-              echo "<img src='$path' class='text-center img-fluid rounded-3 flex-fill' alt='Img $i'>";
-              echo "<h3 class='text-center txt-color-main'>$name</h3></div>";
+              $path = $dir . $name . "." . pathinfo($images[$i], PATHINFO_EXTENSION);
+              echo "<div class='container-fluid'>";
+              echo "<img src='$path' class='img-fluid d-block mx-auto my-0 p-0' alt='Img $i'>";
+              echo "<h3 class='container-fluid bg-main-body txt-color-main'>$name</h3></div>";
             }
           ?>
         </div>
-        <div class="col bg-main-body-bg p-0 rounded-end-5 rounded-end   no-rount-top"> <!--Gallery Column 2 -->
+        <div class="col"> <!--Gallery Column 2 -->
           <?php
             for($i = 0 ; $i < count($images) ; $i++)
             if($i % 2 !== 0)
             {
               $name = pathinfo($images[$i], PATHINFO_FILENAME);
               $path = $dir . $name . ".jpg";
-              echo "<div class='container bg-seco-body-bg m-3 mx-0 p-3 text-center rounded-5'>";
-              echo "<img src='$path' class='text-center img-fluid rounded-3 flex-fill' alt='Img $i'>";
-              echo "<h3 class='text-center txt-color-main'>$name</h3></div>";
+              echo "<div class='container-fluid m-0'>";
+              echo "<img src='$path' class='img-fluid d-block mx-auto my-0 p-0' alt='Img $i'>";
+              echo "<h3 class='container-fluid bg-main-body txt-color-main'>$name</h3></div>";
             }
           ?>
         </div>

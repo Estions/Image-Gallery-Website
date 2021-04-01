@@ -1,23 +1,4 @@
 /* SCSS HEX */
-.bg-gradient {
-  background-image: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.bg-main-body-bg {
-  background-color: #323036ff !important;
-}
-
-.bg-seco-body-bg {
-  background-color: #6d6875ff !important;
-}
-
-.txt-color-main {
-  color: #fbdac8ff !important;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -42,7 +23,7 @@
   --bs-dark: #212529;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(to bottom, #ffcdb2, #fbc3ac, #f7b9a7, #f2afa2, #eda59f, #e19c9e, #d5939d, #c78b9b, #af8297, #977a8f, #807184, #6d6875);
+  --bs-gradient: linear-gradient(deg(90), #ff0a2bff, #ff5d73ff);
 }
 
 *,
@@ -1742,33 +1723,22 @@ progress {
   }
 }
 
-.rounded-5 {
-  border-radius: 1em;
+.bg-gradient {
+  background-image: linear-gradient(deg(90), #ff0a2bff, #ff5d73ff);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.rounded-end-5 {
-  border-bottom-left-radius: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-right-radius: 2rem !important;
-  border-top-right-radius: 2rem !important;
+.bg-main-body {
+  background-color: #ffffffff !important;
 }
 
-.rounded-start-5 {
-  border-bottom-left-radius: 2rem !important;
-  border-top-left-radius: 2rem !important;
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+.bg-seco-body {
+  background-color: #7c7a7aff !important;
 }
 
-.rounded-top-5 {
-  border-top-left-radius: 2rem !important;
-  border-top-right-radius: 2rem !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-.no-rount-top {
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+.txt-color-main {
+  color: #000000ff !important;
 }
 /*# sourceMappingURL=styles-main.css.map */
