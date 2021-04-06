@@ -19,7 +19,8 @@
       </div>
       <div class="p-3 row border-top-5 g-0 bg-main-body"><p class="fs-3 text-center">Images using loremPicsum</p></div>  <!-- footer row --> 
     </div>
-    <script type = "module" src = "js/etools.js"></script>
+    <script src = "js/etools.js"></script>
     <!-- Bootstrap Bundle with Popper --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    
   </body>
 </html>
