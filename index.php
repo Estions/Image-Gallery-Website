@@ -9,19 +9,17 @@
   </head>
 
   <body class = "bg-gradient">
-    <div class="container"> <!-- main container -->
+    <div class="container bg-seco-body p-1 py-0"> <!-- main container -->
       <div class="row border-bottom-5 g-0 bg-main-body"><p class="fs-1 text-center ">Gallery</p></div>  <!-- name row --> 
       <div class="row g-2"> <!-- gallery row -->
-        <div class="JLC1 col"> <!-- gallery col 1 -->
-          <!-- LINK JS TO HERE 1 -->
+        <div class="col" id="col 1"> <!-- gallery col 1 -->
         </div>
-        <div class="JLC2 col"> <!-- gallery col 2 -->
-          <!-- LINK JS TO HERE 2 -->
+        <div class="col" id="col 2"> <!-- gallery col 2 -->
         </div>
       </div>
       <div class="p-3 row border-top-5 g-0 bg-main-body"><p class="fs-3 text-center">Images using loremPicsum</p></div>  <!-- footer row --> 
     </div>
-    <!-- Custom Inf Scroll and Loading--><script src="js/etools.js"></script>
+    <script type = "module" src = "js/etools.js"></script>
     <!-- Bootstrap Bundle with Popper --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
