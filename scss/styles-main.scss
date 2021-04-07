@@ -8,7 +8,7 @@
 $cc-black: #000000ff;
 $cc-white: #ffffffff;
 $cc-davys-grey: #494949ff;
-$cc-sonic-silver: #7c7a7aff;
+$cc-sonic-silver: #7c7a7a7f;
 $cc-g1: #eeaecaff;
 $cc-g2: #94bbe9ff;
 $emSize : 2rem;
@@ -35,6 +35,7 @@ $gradient: linear-gradient(25deg,$cc-g2,$cc-g1);
 
 .bg-gradient{
     background-image: $gradient;
+    
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,4 +62,16 @@ $gradient: linear-gradient(25deg,$cc-g2,$cc-g1);
     border-bottom-right-radius : 0 !important; 
     border-top-left-radius: $emSize !important;
     border-top-right-radius: $emSize !important;
+}
+
+.border-all-5{
+    border-bottom-left-radius : $emSize !important; 
+    border-bottom-right-radius : $emSize !important; 
+    border-top-left-radius: $emSize !important;
+    border-top-right-radius: $emSize !important;
+}
+
+.image-stretch{
+    width:100% !important;
+    max-height:100% !important;
 }

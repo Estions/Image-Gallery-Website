@@ -17,10 +17,10 @@
         <div class="col" id="col2"> <!-- gallery col 2 -->
         </div>
       </div>
-      <div class="p-3 row border-top-5 g-0 bg-main-body" onclick="manualLoadMore()" id="endC"><p class="fs-3 text-center">Images using loremPicsum</p></div>  <!-- footer row --> 
+      <div class="m-3 row border-all-5 g-0 bg-main-body"><button class="btn" onclick="manualLoadMore()">Load More</button></div>
+      <div class="p-3 row border-top-5 g-0 bg-main-body" id="endC"><p class="fs-3 text-center">Images from Pixabay</p></div>  <!-- footer row --> 
     </div>
     <script src = "js/etools.js"></script>
     <!-- Bootstrap Bundle with Popper --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    
   </body>
 </html>
