@@ -4,7 +4,7 @@
         "localhost",
         "root",
         "",
-        "image_test"
+        "cvtest"
     );
     if ($dbConnection->connect_error)
     {
