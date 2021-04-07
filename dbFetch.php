@@ -25,7 +25,7 @@ else
      
     echo "|
     <div class='container-fluid my-3 bg-main-body p-0 text-center'>
-    <img class='img-fluid image-stretch' src={$rowObj->img_path} alt={$rowObj->img_author}></img>
+    <img class='img-fluid' src={$rowObj->img_path} alt={$rowObj->img_author}></img>
     <p class='text-center my-0 fs-3'>{$rowObj->img_name}</p>
     <p class='text-left m-1 fs-6'>{$rowObj->img_author}</p>
     </div>";
