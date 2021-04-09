@@ -15,9 +15,9 @@ FEATURES:
 >    `img_path`
 >)
 >VALUES(
->    'inputName',
->    'inputAuthor',
->   'input-Path'
+>    `inputName`,
+>    `inputAuthor`,
+>    `input-Path`
 >)
 
 BUGS:
