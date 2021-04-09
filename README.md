@@ -26,6 +26,7 @@ BUGS:
 * When adding images using SQLAdmin the autoincrement on the id column sometimes doesn't work
 
 NOTES:
+* Database table used for testing is in the Extras folder
 * Using `|` to split queries sounds like a bad idea, but that's the best I've got
 * Code Specific notes are in code files
 * Images aren't layed out in a reasonable way, but since that requires me to know image height - the whole code needs reformatting and I barely managed to make loading work at all
