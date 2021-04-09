@@ -4,7 +4,7 @@
 
 FEATURES:
 
-* __2 Column Layout__ made using `__Bootstrap 5__` grid layout.
+* __2 Column Layout__ made using __`Bootstrap 5`__ grid layout.
 * __Image Sorting__ and fetching using `PHP` and `SQL` database
 * Infinite Scroll made using `Intersection Observer` in `JavaScript`
 * Images can be added from any website where you can get the raw image link by simply using :
