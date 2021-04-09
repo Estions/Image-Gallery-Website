@@ -25,7 +25,7 @@ function getData()
         i_number++;
       });
     };
-    xmlhttp.open("GET","databaseFetch.php?q1="+s_index+"&q2="+e_index,true);
+    xmlhttp.open("GET","php/databaseFetch.php?q1="+s_index+"&q2="+e_index,true);
     xmlhttp.send();
     s_index += index_q;
     e_index += index_q;
