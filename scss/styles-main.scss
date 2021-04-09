@@ -33,6 +33,7 @@ $gradient: linear-gradient(25deg,$cc-g2,$cc-g1);
 
 // 5. Add additional custom code here
 
+//Custom colors since i like them
 .bg-gradient{
     background-image: $gradient;
     
@@ -51,12 +52,14 @@ $gradient: linear-gradient(25deg,$cc-g2,$cc-g1);
     color: $cc-black !important;
 }
 
+//Custom borders since IMO the integrated rounding is incredibly subtle
 .border-bottom-5{
     border-bottom-left-radius : $emSize !important; 
     border-bottom-right-radius : $emSize !important; 
     border-top-left-radius: 0em !important;
     border-top-right-radius: 0em !important;
 }
+
 .border-top-5{
     border-bottom-left-radius : 0 !important; 
     border-bottom-right-radius : 0 !important; 
@@ -69,8 +72,4 @@ $gradient: linear-gradient(25deg,$cc-g2,$cc-g1);
     border-bottom-right-radius : $emSize !important; 
     border-top-left-radius: $emSize !important;
     border-top-right-radius: $emSize !important;
-}
-
-.image-stretch{
-    max-height:100% !important;
 }
