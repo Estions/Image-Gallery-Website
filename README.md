@@ -21,11 +21,12 @@ FEATURES:
 >)
 
 BUGS:
-* Layout sometimes breaks on screens smaller than 425px - this occurs when author name is longer than image containter.
+* Layout sometimes breaks on screens smaller than __425px__ - this occurs when author name is longer than image containter.
 * I'm 90% sure that loading can break if someone scrolls too fast. Since that's why i'm using observer. When using onscroll triggers it loaded several times instead of 1.
 * When adding images using SQLAdmin the autoincrement on the id column sometimes doesn't work
 
 NOTES:
-* Using `|` to split queries sounds like a bad idea, but that's the best i got
+* Using `|` to split queries sounds like a bad idea, but that's the best I've got
+* Code Specific notes are in code files
 
 All test images taken from Pixabay
