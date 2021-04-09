@@ -4,9 +4,9 @@
 
 FEATURES:
 
-* 2 column layout made using bootstrap 5 grid layout.
-* Image sorting and fetching using php and SQL database
-* Infinite Scroll made using Intersection Observer in JavaScript
+* 2 column layout made using `Bootstrap 5` grid layout.
+* Image sorting and fetching using `PHP` and `SQL` database
+* Infinite Scroll made using `Intersection Observer` in `JavaScript`
 * Images can be added from any website where you can get the raw image link by simply using :
 
 >INSERT INTO `images`(
