@@ -28,5 +28,6 @@ BUGS:
 NOTES:
 * Using `|` to split queries sounds like a bad idea, but that's the best I've got
 * Code Specific notes are in code files
+* Images aren't layed out in a reasonable way, but since that requires me to know image height - the whole code needs reformatting and I barely managed to make loading work at all
 
 All test images taken from Pixabay
