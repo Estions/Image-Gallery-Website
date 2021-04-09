@@ -1,4 +1,3 @@
-# CV Assignment 
 ## Image Gallery
 ### By Erikas Blidnyj for Adveitas
 
